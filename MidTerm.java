@@ -3,7 +3,7 @@ public class MidTerm{
         Product chair = new Product("Chair", 500.0);
         Electronics tv = new Electronics("Television", 20000.0,"Samsung", "Neo QLED");
         Smartphone iphone = new Smartphone("Iphone", 40000.0, "Apple", "Iphone 99", "ios");
-        Book oppProgramming = new Book("OOP Programing", 250.0, "John Doe", 300);
+        Book OOPProgramming = new Book("OOP Programing", 250.0, "John Doe", 300);
 
         chair.getName();
         chair.getPrice();
@@ -22,10 +22,10 @@ public class MidTerm{
         iphone.getOperatingSystem();
         System.out.println("***************************");
 
-        oppProgramming.getName();
-        oppProgramming.getPrice();
-        oppProgramming.getAuthor();
-        oppProgramming.getPages();
+        OOPProgramming.getName();
+        OOPProgramming.getPrice();
+        OOPProgramming.getAuthor();
+        OOPProgramming.getPages();
     }
 }
 
@@ -118,16 +118,18 @@ class Book extends Product{
         this.Pages = pages;
     }
 
-    public void getAuthor(){
+    public String getAuthor(){
         System.out.println("Author: "+ this.Author);
+        return Author;
     }
 
     public void setAuthor(String Newauthor){
         this.Author = Newauthor;
     }
     
-    public void getPages(){
+    public int getPages(){
         System.out.println("Pages: " + this.Pages);
+        return Pages;
     }
 
     public void setPages(int Newpages){
